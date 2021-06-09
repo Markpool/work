@@ -1,0 +1,24 @@
+
+.modal-overlay
+  form.form
+    .form-top
+      .form__headind.heading Create new item
+    .form-body
+      .input__box
+        label.input__name Name:
+        input.form__input(type='text')
+      .input__box
+        label.input__name Image:
+        .input__file-wrapper
+          span.form__input-file-placeholder no files
+          input#file.form__input-file(type='file' name='file')
+          span.form__input-file-text Choose
+      .input__box
+        span.input__name Description:
+        textarea.form__text(cols='30' rows='10')
+      label.form__checbox
+        input.checkbox(type='checkbox' name='name')
+        span show
+    .form-bottom
+      #send__form.form__btn.form_btn_unactive OK
+      #close__form.form__btn.form_btn_active Cancel

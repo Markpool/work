@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #161616;
+    margin: 0;
+}
+header {
+    height: 120px;
+}
+.container {
+    max-width: 1400px;
+    padding: 0 10px;
+}
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 2px solid black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    background-color: #161616;
+}
+    
+.header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 2;
+}
+.logo {
+    width: 60px;
+}
+// .header__burger {
+//     display: block;
+//     position: relative;
+//     width: 30px;
+//     height: 20px;
+//     z-index: 3;
+// }
+// .header__burger span {
+//     position: absolute;
+//     background-color: #000;
+//     position: absolute;
+//     left: 0;
+//     width: 100%;
+//     height: 2px;
+//     top: 9px;
+//     transition: 0.3s;
+// }
+// .header__burger:before,
+// .header__burger:after {
+//     content: '';
+//     background-color: #000;
+//     position: absolute;
+//     width: 100%;
+//     height: 2px;
+//     left: 0;
+//     transition: 0.3s;
+// }
+
+// .header__burger:before {
+//     top: 0;
+// }
+// .header__burger:after {
+//     bottom: 0;
+// }
+// .header__burger.active-1 span {
+//     transform: scale(0);
+// }
+// .header__burger.active-1:before {
+//     transform: rotate(45deg);
+//     top: 9px;
+// }
+// .header__burger.active-1:after {
+//     transform: rotate(-45deg);
+//     bottom: 9px;
+// }
+// .header__menu {
+//     position: fixed;
+//     top: -100%;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     overflow: auto;
+//     background-color: #ffffff;
+//     padding: 70px 10px 20px 10px;
+//     transition: 0.3s;
+// }
+// .header__menu.active-1 {
+//     top: 0;
+// }
+// .header__list {
+//     display: block;
+//     text-align: center;
+// }
+// .header__list li {
+//     margin: 0 0 20px 0;
+// }
+.button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    color: #fff;
+    font-size: 25px;
+    background: rgb(240,220,5);
+    background: linear-gradient(90deg, rgba(240,220,5,1) 0%, rgba(219,226,8,1) 50%, rgba(0,212,255,1) 100%);
+    border: none;
+    border-radius: 4px;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    &:hover {
+        background: rgb(0,212,255);
+        background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(219,226,8,1) 50%, rgba(240,220,5,1) 100%);
+    }
+}
+.mail {
+    font-size: 20px;
+    color: #000000;
+    background-color: rgb(229, 255, 0);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    bottom: 0;
+    position: fixed;
+    z-index: 50;
+
+}
+.footer__link {
+    font-size: 18px;
+    color: #000000;
+    transition: all ease-in-out 0.3s;
+    text-decoration: none;
+    &:hover{
+        color: #527500;
+    }
+}
+.main-body__inner {
+    padding-top: 150px;
+}
+
+
+
+// ADD FORM
+
+.modal-overlay{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.445);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 200;
+    transition: all linear 0.3s;
+
+}
+
+.form {
+    width: 300px;
+    height: 480px;
+    background: #262626;
+    border: 1px solid #3d3d3d;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.form--open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.form-top {
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #3d3d3d;
+}
+.form__headind {
+    color: var(--light-grey);
+}
+.form-body {
+    padding: 20px;
+}
+.input__box {
+    margin-bottom: 10px;
+}
+.input__name {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--light-grey);
+}
+.form__input {
+    padding-left: 20px;
+    width: 100%;
+    height: 33px;
+    background: var(--white-color);
+    border-radius: 15px;
+
+    color: var(--dark-grey);
+}
+.input__file-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    width: 100%;
+    height: 33px;
+    background: var(--white-color);
+    border-radius: 15px;
+    overflow: hidden;
+}
+.form__input-file-placeholder {
+    color: var(--light-grey);
+}
+.form__input-file {
+    position: absolute;
+    cursor: pointer;
+    width: 90%;
+    opacity: 0;
+}
+
+.form__input-file:hover + .form__input-file-text {
+    background-color: violet;
+}
+
+.form__input-file-text {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    height: 33px;
+    background: #979494;
+    color: var(--white-color);
+    cursor: pointer;
+    transition: all linear 0.3s;
+}
+
+.form__text {
+    padding: 10px;
+    width: 249px;
+    height: 80px;
+
+    background: #1c1c1c;
+    border: 1px solid #3d3d3d;
+    box-sizing: border-box;
+    border-radius: 15px;
+    color: var(--white-color);
+}
+
+.form__checbox {
+    position: relative;
+    padding-left: 30px;
+}
+
+.checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.form__checbox span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border: 2px solid #aaaaaa;
+    border-radius: 5px;
+    transition: all linear 0.2s;
+}
+
+.form__checbox span::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 24px;
+    height: 24px;
+    background: url(/src/image/checkbox-active.svg) no-repeat;
+    background-size: cover;
+    opacity: 0;
+    transition: all linear 0.2s;
+}
+.form__checbox input:checked + span::before {
+    opacity: 0;
+}
+
+.form__checbox input:checked + span::after {
+    opacity: 1;
+}
+
+.form-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 0 20px;
+}
+.form__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: unset;
+    width: 115px;
+    height: 33px;
+    border-radius: 6px;
+    border: 1px solid #7d7c7c;
+}
+
+.form_btn_unactive {
+    background: #868686;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0.3;
+    transition: all linear 0.3s 0.3s;
+}
+
+.form_btn_active {
+    position: relative;
+    background: #5a5a5a;
+    color: var(--light-grey);
+    opacity: 1;
+    pointer-events: unset;
+    cursor: pointer;
+    overflow: hidden;
+    &::after {
+        content: "";
+        position: absolute;
+        left: -100%;
+        width: 100%;
+        height: 33px;
+        background: #1c1c1c57;
+        opacity: 0.3;
+        transition: all linear 0.3s;
+    }
+}
+
+.form_btn_active:hover::after {
+    left: 0;
+}
+
+
+
+//content
+.game-inner {
+    margin: 0 auto;
+    max-width: 1350px;
+    padding-top: 150px;
+    padding-top: 20px;
+    @media (max-width:1299px) {
+        max-width: 1024px;
+    }
+    @media (max-width:979px) {
+        max-width:650px;
+    }
+    @media (max-width:659px) {
+        max-width:320px;
+    }
+    @media (max-width:500px) {
+        max-width:300px;
+    }
+}
+
+.card__heading {
+    margin: 5px;
+}
+.game__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.game__task {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.game__card-title {
+    display: flex;
+    justify-content: center;
+}
+.game__item {
+    margin: 0 10px 50px 10px;
+    @media (max-width:1299px) {
+       margin: 0 0 50px 0;
+    }
+}
+.game__card {
+    width: 300px;
+    background: #eeff00;
+    border-radius: 15px;
+ 
+}
+.game__card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.game__card-img {
+    height: 200px;
+    cursor: pointer;
+    transition: filter linear 0.6s;
+    :hover {
+        filter: grayscale(1);
+    }
+}
+
+.game__card-img img {
+    width: 100%;
+    height: 200px;
+}
+.game__card-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 15px;
+}
+.card__description {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+.more {
+    font-size: 15px;
+    text-decoration: underline;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 8px;
+}
