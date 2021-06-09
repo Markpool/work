@@ -3,19 +3,23 @@ html(lang="en")
     head
         title work
     body 
+        //-шапка
         header
-           
             .container
                 .header 
-                    a(href="#") 
+                    include modules/menu
+                    a.sam(href='#')
                         img.logo(src="/src/image/joystick.svg", alt="logotaip")
+        //-кнопка добавления файлов
         section.button
             button.btn Add item
+              input#check-men(type='checkbox')
+              label(for='check-menu')
             include modules/modal
 
-
+        //- подвал
         footer.mail 
             .container
                 span.email 
-                    a.footer__link(href='mailto:123546razil@gmail.com') 123546razil@gmail.com
+                    a.footer__link.adress(href='mailto:123546razil@gmail.com') 123546razil@gmail.com
             
