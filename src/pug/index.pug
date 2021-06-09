@@ -12,9 +12,8 @@ html(lang="en")
                         img.logo(src="/src/image/joystick.svg", alt="logotaip")
         //-кнопка добавления файлов
         section.button
-            button.btn Add item
-              input#check-men(type='checkbox')
-              label(for='check-menu')
+            input(type="checkbox")#btn-modal 
+            label(for='btn-modal').btn Add items
             include modules/modal
 
         //- подвал

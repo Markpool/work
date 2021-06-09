@@ -1,14 +1,12 @@
-
 .modal-overlay
   form.form
     .form-top
-      .form__headind.heading Create new item
+      .form__headind.heading New item
     .form-body
       .input__box
         label.input__name Name:
         input.form__input(type='text')
       .input__box
-        label.input__name Image:
         .input__file-wrapper
           span.form__input-file-placeholder no files
           input#file.form__input-file(type='file' name='file')
@@ -21,4 +19,5 @@
         span show
     .form-bottom
       #send__form.form__btn.form_btn_unactive OK
-      #close__form.form__btn.form_btn_active Cancel
+      input(type="checkbox")#close__form
+      label(for="close__form").form__btn.form_btn_active Cancel
